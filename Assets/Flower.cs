@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Flower : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody rb;
+
+    public float maxRotation = 10;
+
+    public float lifetime;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+
+        Vector3 torque = new Vector3(0,0,Random.Range(-maxRotation, maxRotation));
+        rb.AddTorque(torque, ForceMode.Impulse);        
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

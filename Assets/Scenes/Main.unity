@@ -408,6 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074880837}
   - component: {fileID: 1074880838}
+  - component: {fileID: 1074880839}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -444,6 +445,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flower: {fileID: 1716180923}
   offset: 10
+--- !u!114 &1074880839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074880836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b28be205cbb6f49bb725a8b7690290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1371774361
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3076986512d2bc74f881a8afb0742afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRotation: 2
 --- !u!1 &1795564631
 GameObject:
   m_ObjectHideFlags: 0
