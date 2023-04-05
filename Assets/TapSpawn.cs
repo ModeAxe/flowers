@@ -6,6 +6,7 @@ public class TapSpawn : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject flower;
+    public GameObject backPlate;
     public float offset = 10f;
     void Start()
     {
@@ -19,7 +20,7 @@ public class TapSpawn : MonoBehaviour
         {
             Vector2 mousePosition = Input.mousePosition;
             Debug.Log(mousePosition);
-            Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, offset));
+            Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, backPlate.transform.position.z));
             Spawn(position);
         }
     }
