@@ -7,7 +7,9 @@ public class GenerativeSpawn : MonoBehaviour
     //timescale represents x number of seconds == one year
     public float timeScale = 20f;
     public GameObject backPlate;
-    public GameObject flower;
+    public GameObject NationPrefab;
+
+    private List<GameObject> nations = new List<GameObject>();
     public float gridOffsetX = 0;
     public float gridOffsetY = 0;
 
@@ -47,19 +49,14 @@ public class GenerativeSpawn : MonoBehaviour
 
         }
 
-        //Flowers will not be generated here. This is just for demo purposes
+        //Generate Nations (flower spawn points)
         foreach (Vector3 point in spawnPoints)
         {
-            GameObject.Instantiate(flower, point, ((Quaternion.LookRotation(-Camera.main.transform.forward) * Quaternion.Euler(90, 0, 0))));
+            nations.Add(GameObject.Instantiate(NationPrefab, point, ((Quaternion.LookRotation(-Camera.main.transform.forward) * Quaternion.Euler(90, 0, 0)))));
         }
-
-
-
-
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (time > timeScale)
@@ -69,6 +66,15 @@ public class GenerativeSpawn : MonoBehaviour
             Debug.Log(year);
         }
         time += Time.deltaTime;
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    for (int i = 70; i < 140; i++)
+        //   {
+        //        Destroy(nations[i]);
+        //
+        //    }
+        //}
 
     }
 }
