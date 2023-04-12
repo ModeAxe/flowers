@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 public class GenerativeSpawn : MonoBehaviour
 {
@@ -9,9 +11,13 @@ public class GenerativeSpawn : MonoBehaviour
     public GameObject backPlate;
     public GameObject NationPrefab;
 
+    public TextAsset DATA;
+
     private List<GameObject> nations = new List<GameObject>();
     public float gridOffsetX = 0;
     public float gridOffsetY = 0;
+
+    public int NumberOfYears = 20;
 
 
     private int year = 1990;
@@ -55,6 +61,7 @@ public class GenerativeSpawn : MonoBehaviour
             nations.Add(GameObject.Instantiate(NationPrefab, point, ((Quaternion.LookRotation(-Camera.main.transform.forward) * Quaternion.Euler(90, 0, 0)))));
         }
 
+        AssignNationData();
     }
 
     void Update()
@@ -64,6 +71,7 @@ public class GenerativeSpawn : MonoBehaviour
             time = 0;
             year++;
             Debug.Log(year);
+            Debug.Log(nations.Count);
         }
         time += Time.deltaTime;
 
@@ -76,5 +84,40 @@ public class GenerativeSpawn : MonoBehaviour
         //    }
         //}
 
+    }
+
+
+    private void AssignNationData()
+    {
+        //Open CSV
+        string[] lines_array = DATA.text.Split(new string[] { "\n" }, StringSplitOptions.None);
+        List<string> lines = lines_array.ToList();
+        lines.RemoveAt(0);
+        //for each line assign data
+        foreach (string line in lines)
+        {
+            string[] lineData = line.Split(new string[] { "," }, StringSplitOptions.None);
+            if (lineData[0] == "")
+            {
+                continue;
+            }
+            int index = int.Parse(lineData[0]);
+
+            if (index > 200)
+            {
+                continue;
+            }
+
+            string name = lineData[1];
+            List<float> rates = new List<float>();
+
+            for (int i = 3; i < 3 + NumberOfYears + 1; i++)
+            {
+                
+                rates.Add(float.Parse(lineData[i]));
+            }
+            nations[index].GetComponent<NationController>().SetName(name);
+            nations[index].GetComponent<NationController>().SetRates(rates);
+        }
     }
 }
