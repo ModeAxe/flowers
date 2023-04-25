@@ -19,7 +19,6 @@ public class TapSpawn : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePosition = Input.mousePosition;
-            Debug.Log(mousePosition);
             Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, backPlate.transform.position.z));
             Spawn(position);
         }

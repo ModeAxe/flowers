@@ -53,7 +53,6 @@ public class NationController : MonoBehaviour
                 currentRate = rates[yearIndex];
                 currentYear = GenerativeSpawn.YEAR;
                 var delta = currentRate - previousRate;
-                Debug.Log(delta);
                 if (delta > 0)
                 {
                     float delay = UnityEngine.Random.Range(0, maxDelay);

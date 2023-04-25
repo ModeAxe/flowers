@@ -13,6 +13,17 @@ public class Flower : MonoBehaviour
     public float lifetime;
 
     public List<Material> flowerMaterials = new List<Material>();
+    public List<AudioClip> audioClips = new List<AudioClip>();
+
+    private void Awake()
+    {
+        int audio_index = (int)Random.Range(0, audioClips.Count);
+
+        var audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.clip = audioClips[audio_index];
+        audioSource.Play();
+
+    }
 
     void Start()
     {
@@ -24,8 +35,6 @@ public class Flower : MonoBehaviour
         transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
 
         int material_index = (int) Random.Range(0, flowerMaterials.Count);
-
-        Debug.Log(material_index);
 
         gameObject.GetComponent<Renderer>().material = flowerMaterials[material_index]; 
     }
