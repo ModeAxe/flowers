@@ -359,6 +359,8 @@ MonoBehaviour:
   minScale: 0.08
   maxScale: 0.1356464
   lifetime: 0
+  flowerMaterials:
+  - {fileID: 2100000, guid: 9d3d30772211acd4eb7bed04d2273c82, type: 2}
 --- !u!54 &488737452
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2082,6 +2084,8 @@ MonoBehaviour:
   minScale: 0.08
   maxScale: 0.1356464
   lifetime: 0
+  flowerMaterials:
+  - {fileID: 2100000, guid: b5092699e7eac714781a45f64ef13b97, type: 2}
 --- !u!1 &1716180923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2121,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 88
+  m_Constraints: 72
   m_CollisionDetection: 0
 --- !u!64 &1716180925
 MeshCollider:
@@ -2153,7 +2157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d3d30772211acd4eb7bed04d2273c82, type: 2}
+  - {fileID: 2100000, guid: ec59a276f9ae35041bd29856d0f3b07e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2215,6 +2219,26 @@ MonoBehaviour:
   minScale: 0.08
   maxScale: 0.1356464
   lifetime: 0
+  flowerMaterials:
+  - {fileID: 2100000, guid: ec59a276f9ae35041bd29856d0f3b07e, type: 2}
+  - {fileID: 2100000, guid: 9e0f5ffb13b99c44081d749a20d47031, type: 2}
+  - {fileID: 2100000, guid: d7dcebe4fe0b3c0449b63239d8c4b7ec, type: 2}
+  - {fileID: 2100000, guid: 8443b98204bacc141b2dfba24f5870c3, type: 2}
+  - {fileID: 2100000, guid: 70b468d30084538418821d74dcbdc272, type: 2}
+  - {fileID: 2100000, guid: d8e5cce8948c0d64b8584bacded68da9, type: 2}
+  - {fileID: 2100000, guid: b995def1fa063ee4999d23d8ca30d0e5, type: 2}
+  - {fileID: 2100000, guid: 1dcfc54d99eaf6744a0f6192d29684e6, type: 2}
+  - {fileID: 2100000, guid: 7f4e4fa936bf4a846b1e5acc2da14e6c, type: 2}
+  - {fileID: 2100000, guid: 61e44e7a73fac4944a24b163f3f25934, type: 2}
+  - {fileID: 2100000, guid: 578c6c19d90bbe84d846376c6581b605, type: 2}
+  - {fileID: 2100000, guid: 6c231885ef53b6f45b2e42cbf2f16259, type: 2}
+  - {fileID: 2100000, guid: 9fd65f19407916d47abef9072304350b, type: 2}
+  - {fileID: 2100000, guid: 7d66dbaf29e496e4f86a4d68515164d2, type: 2}
+  - {fileID: 2100000, guid: 91f9665e8e523054586e67248c2601fd, type: 2}
+  - {fileID: 2100000, guid: b0d92d176083f40429c388ffec3b60c3, type: 2}
+  - {fileID: 2100000, guid: 4f5afa494a8357c46926c8eb00b9bfcd, type: 2}
+  - {fileID: 2100000, guid: 4b270e220ef1aaf4780591babc3a1b34, type: 2}
+  - {fileID: 2100000, guid: 048945cbbc014c042a63ad07731b444c, type: 2}
 --- !u!1 &1742012255
 GameObject:
   m_ObjectHideFlags: 0
