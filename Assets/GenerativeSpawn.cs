@@ -20,7 +20,7 @@ public class GenerativeSpawn : MonoBehaviour
     public int NumberOfYears = 20;
 
 
-    private int year = 1990;
+    public static int YEAR = 1990;
     private float time;
 
     private List<Vector3> spawnPoints = new List<Vector3>();
@@ -69,9 +69,8 @@ public class GenerativeSpawn : MonoBehaviour
         if (time > timeScale)
         {
             time = 0;
-            year++;
-            Debug.Log(year);
-            Debug.Log(nations.Count);
+            YEAR++;
+            Debug.Log(YEAR);
         }
         time += Time.deltaTime;
 
