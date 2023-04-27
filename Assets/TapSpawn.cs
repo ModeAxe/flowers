@@ -22,6 +22,18 @@ public class TapSpawn : MonoBehaviour
             Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, backPlate.transform.position.z));
             Spawn(position);
         }
+
+        Touch touch;
+        if (Input.touchCount > 0)
+        {
+            touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                Vector2 mousePosition = touch.position;
+                Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, backPlate.transform.position.z));
+                Spawn(position);
+            }
+        }
     }
 
     void Spawn(Vector3 position)

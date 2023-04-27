@@ -48,4 +48,15 @@ public class Flower : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (gameObject.tag.Equals("flower"))
+        {
+            if (collision.gameObject.tag.Equals("person"))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

@@ -60,14 +60,23 @@ public class NationController : MonoBehaviour
                 }
                 else
                 {
-                    float delay = UnityEngine.Random.Range(0, maxDelay);
-                    StartCoroutine(SpawnFlower(delay, antiFlower));
+                    if (currentYear > 1995)
+                    {
+                        float delay = UnityEngine.Random.Range(0, maxDelay);
+                        StartCoroutine(SpawnFlower(delay, antiFlower));
+                    }
                 }
             }
             catch (Exception ex)
             {
                 currentRate = 0;
                 currentYear = GenerativeSpawn.YEAR;
+            }
+
+            if (currentYear > 2012)
+            {
+                float delay = UnityEngine.Random.Range(0, maxDelay);
+                StartCoroutine(SpawnFlower(delay, antiFlower));
             }
         }
     }

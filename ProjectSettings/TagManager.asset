@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - BackPlate
+  - flower
+  - person
   layers:
   - Default
   - TransparentFX
