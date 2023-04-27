@@ -73,7 +73,7 @@ public class NationController : MonoBehaviour
                 currentYear = GenerativeSpawn.YEAR;
             }
 
-            if (currentYear > 2012)
+            if (currentYear > 2020)
             {
                 float delay = UnityEngine.Random.Range(0, maxDelay);
                 StartCoroutine(SpawnFlower(delay, antiFlower));
