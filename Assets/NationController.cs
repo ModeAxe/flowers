@@ -25,6 +25,7 @@ public class NationController : MonoBehaviour
     {
         nameTag = gameObject.transform.GetChild(0).gameObject;
         nameTag.GetComponent<TextMeshPro>().text = nationName;
+        nameTag.SetActive(false);
         try
         {
             currentRate = rates[yearIndex];
@@ -41,6 +42,16 @@ public class NationController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (nameTag.activeSelf) { nameTag.SetActive(false); } else { nameTag.SetActive(true); }
+        }
+
+        if (GenerativeSpawn.YEAR > 2025)
+        {
+            //Debug.Log("Reset");
+            //currentRate = 0;
+            //previousRate = 0;
+            //GenerativeSpawn.YEAR = 1990;
+            //currentYear = 1990;
+            //yearIndex = 0;
         }
 
         if (GenerativeSpawn.YEAR != currentYear)

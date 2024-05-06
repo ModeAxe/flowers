@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &278358451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b28be205cbb6f49bb725a8b7690290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeScale: 5
+  timeScale: 8
   backPlate: {fileID: 1371774361}
   NationPrefab: {fileID: 1526789843592009338, guid: 42dfefe628ee7b142a54a0cc46f27419, type: 3}
   DATA: {fileID: 4900000, guid: 5f703166f35a35241aaa8e54224eee6c, type: 3}

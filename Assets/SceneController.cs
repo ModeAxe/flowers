@@ -35,6 +35,10 @@ public class SceneController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        
+        if (GenerativeSpawn.YEAR > 2025)
+        {
+            GenerativeSpawn.YEAR = 1990;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

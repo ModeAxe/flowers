@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flower: {fileID: 1489085956002128, guid: a67e17ce927aa3c4ebe55675af57ce88, type: 3}
   antiFlower: {fileID: 7529792424310297073, guid: b333508a43193434c90ebfe72d0787c3, type: 3}
-  maxDelay: 5
+  maxDelay: 8
 --- !u!1 &1526789844664563983
 GameObject:
   m_ObjectHideFlags: 0
